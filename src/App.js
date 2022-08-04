@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
+import FormInputControl from "./components/FormInputControl";
+import BarChart from "./components/barchart/BarChart";
+import { useState } from "react";
 
 function App() {
+
+  const [porcentaje, setPorcentaje] = useState();
+  const [onShowBarChart, setOnShowBarChart] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div className="container py-5 mt-4">
+        <div className="d-flex">
+          <div className="w-100">
+            <FormInputControl
+              setPorcentaje={(newPorcentaje) => setPorcentaje(newPorcentaje)}
+              setOnShowBarChart={(onShow)=> setOnShowBarChart(onShow)} />
+          </div>
+          <div className="w-100">
+            {onShowBarChart && <BarChart porcentaje={porcentaje} />}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

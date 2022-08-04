@@ -1,0 +1,1 @@
+export const cmToIn = (cm) => cm / 2.54;

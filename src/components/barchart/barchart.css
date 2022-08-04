@@ -1,0 +1,91 @@
+.barchart-gradient {
+    background: linear-gradient(90deg, #009FE3, #009C3D, #98C21D, #FECA00, #D76328);
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 30px solid white;
+}
+
+
+.arrow-container {
+    width: 50px;
+    height: 70px;    
+    position: relative;    
+    visibility: hidden;
+}
+
+
+.arrow-container-esencial {
+    width: 50px;
+    height: 70px;    
+    position: relative;
+    animation-name: move-esencial;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.arrow-container-deportista {
+    width: 50px;
+    height: 70px;    
+    position: relative;
+    animation-name: move-deportista;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.arrow-container-fitness {
+    width: 50px;
+    height: 70px;    
+    position: relative;
+    animation-name: move-fitness;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.arrow-container-aceptable {
+    width: 50px;
+    height: 70px;    
+    position: relative;
+    animation-name: move-aceptable;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+.arrow-container-obeso {
+    width: 50px;
+    height: 70px;    
+    position: relative;
+    animation-name: move-obeso;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes move-esencial {
+    0%   { left:0px; top:0px; }    
+    100%   { left: 6%; top:0px; }     
+}
+
+@keyframes move-deportista {
+    0%   { left:0px; top:0px; }            
+    100%   { left: 26%; top:0px; }    
+}
+
+@keyframes move-fitness {
+    0%   { left:0px; top:0px; }            
+    100%   { left: 47%; top:0px; }    
+}
+
+@keyframes move-aceptable {
+    0%   { left:0px; top:0px; }            
+    100%   { left: 66%; top:0px; }    
+}
+
+@keyframes move-obeso {
+    0%   { left:0px; top:0px; }            
+    100%   { left: 87%; top:0px; }    
+}
